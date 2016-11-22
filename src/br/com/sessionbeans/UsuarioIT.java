@@ -8,7 +8,7 @@ public interface UsuarioIT {
 
 	void addUsuario(Usuario usuario);
 	
-	Usuario findUsuario(int id);
+	Usuario findUsuario(Long id);
 	
 	List<Usuario> listUsuarios();
 	

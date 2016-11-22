@@ -24,7 +24,7 @@ public class UsuarioDao implements UsuarioIT{
 	}
 
 	@Override
-	public Usuario findUsuario(int id) {
+	public Usuario findUsuario(Long id) {
 		return em.find(Usuario.class, id);
 	}
 
@@ -33,7 +33,7 @@ public class UsuarioDao implements UsuarioIT{
 		
 		List<Usuario> usuarios = new ArrayList<Usuario>();
 		
-		Query query = em.createQuery("");
+		Query query = em.createQuery("select u from Usuario u");
 		usuarios = query.getResultList();
 		
 		return usuarios;
