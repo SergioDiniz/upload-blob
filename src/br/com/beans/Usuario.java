@@ -1,6 +1,8 @@
 package br.com.beans;
 
+import javax.persistence.Basic;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -13,6 +15,7 @@ public class Usuario {
 	private Long id;
 	private String nome;
 	@Lob
+	@Basic(fetch=FetchType.LAZY)
 	private byte[] foto;
 	
 	public Usuario() {
