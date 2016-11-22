@@ -9,5 +9,14 @@
 </h:head>
 <h:body>
 
+	<h:form enctype="multipart/form-data">
+		<p:outputLabel value="Nome: " for="nome"/>
+		<p:inputText value="#{usuarioController.usuario.nome}" id="nome" />
+		<br/>
+		<p:fileUpload label="Arquivo" mode="simple" skinSimple="true"/>
+		<br/>
+		<h:commandButton value="Cadastrar" action="#{usuarioController.addUsuario()}" />
+	</h:form>
+
 </h:body>
 </html>
